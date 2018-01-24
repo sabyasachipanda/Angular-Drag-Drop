@@ -1,0 +1,51 @@
+<h3>Filter by Color Code</h3>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-3">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <span>Summary</span>
+          <div class="right">
+            <div class="servive-block-green color-code green" (click)="filterItems($event)">
+            </div>
+            <div class="servive-block-orange color-code orange" (click)="filterItems($event)">
+            </div>
+            <div class="servive-block-dark-red color-code red" (click)="filterItems($event)">
+            </div>
+          </div>
+        </div>
+        <div class="panel-body summary">
+          <!-- <ul class="list-group box"> -->
+          <li draggable *ngFor="let item of items" [dragData]="item" class="list-group-item" (onDrag)="OnDrag($event)">{{item.name}}</li>
+          <!-- </ul> -->
+          <a href="#" class="right">Load more</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-3">
+      <div class="panel panel-default" droppable [dropScope]="isDropAllowed" (onDrop)="onGreenItemDrop($event)">
+        <div class="panel-heading">Green Items here</div>
+        <div class="panel-body green">
+          <li *ngFor="let item of droppedGreenItems" draggable [dragData]="item" class="list-group-item" (onDrag)="OnDrag($event)">{{item.name}}</li>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="panel panel-default" droppable [dropScope]="isDropAllowed" (onDrop)="onOrangeItemDrop($event)">
+        <div class="panel-heading">Orange Items here</div>
+        <div class="panel-body orange">
+          <li *ngFor="let item of droppedOrangeItems" draggable [dragData]="item" class="list-group-item" (onDrag)="OnDrag($event)">{{item.name}}</li>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="panel panel-default" droppable [dropScope]="isDropAllowed" (onDrop)="onRedItemDrop($event)">
+        <div class="panel-heading">Red Items here</div>
+        <div class="panel-body red">
+          <li *ngFor="let item of droppedRedItems" draggable [dragData]="item" class="list-group-item" (onDrag)="OnDrag($event)">{{item.name}}</li>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

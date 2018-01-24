@@ -1,0 +1,44 @@
+.servive-block {
+    text-align: center;
+    padding:10px;
+    cursor: pointer;
+  }
+  
+  .servive-block-dark-red{
+      background: red;
+  }
+  .servive-block-orange{
+    background: orange;
+  }
+  .servive-block-green{
+    background: green;
+  }
+  .clear-fix{
+      clear: both;
+  }
+  .ten{
+    width: 10px;
+  }
+
+  .mar-bot10{
+      margin-bottom: 10px;
+  }
+
+  .circle {
+	border-radius: 50%;
+}
+
+.color-code {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+    line-height: 5px;
+    cursor: pointer;
+}
+.right{
+    float: right;
+}
